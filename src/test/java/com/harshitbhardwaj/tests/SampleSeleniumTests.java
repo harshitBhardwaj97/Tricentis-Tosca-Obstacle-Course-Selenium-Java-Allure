@@ -37,4 +37,11 @@ public class SampleSeleniumTests extends BaseSeleniumTest {
         Assert.assertTrue(sampleSeleniumWebsitePage.isDocumentationLinkWorking());
         logger.info("####### checkIfSeleniumDocumentationLinkIsWorking succeeded #######");
     }
+
+    @Test
+    public void checkIfSeleniumProjectsLinkIsWorking() {
+        logger.info("####### checkIfSeleniumProjectsLinkIsWorking started #######");
+        Assert.assertTrue(sampleSeleniumWebsitePage.isProjectsLinkWorking());
+        logger.info("####### checkIfSeleniumProjectsLinkIsWorking succeeded #######");
+    }
 }

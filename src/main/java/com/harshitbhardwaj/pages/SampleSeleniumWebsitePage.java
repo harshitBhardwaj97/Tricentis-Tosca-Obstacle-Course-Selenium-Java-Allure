@@ -16,6 +16,9 @@ public class SampleSeleniumWebsitePage {
     private final By documentationPageHeading =
             By.xpath("//h1[.='The Selenium Browser Automation Project']");
 
+    private final By projectsHeading = By.xpath("//h1[.='Projects']");
+    private final By projectsLink = By.linkText("Projects");
+
     public SampleSeleniumWebsitePage(PageInteractionHelper pageInteractionHelper) {
         this.pageInteractionHelper = pageInteractionHelper;
     }
@@ -30,10 +33,22 @@ public class SampleSeleniumWebsitePage {
         pageInteractionHelper.clickOnElement(documentationLink);
     }
 
+    @Step("Click on the 'Projects' link")
+    private void clickOnProjectsLink() {
+        pageInteractionHelper.clickOnElement(projectsLink);
+    }
+
     @Step("Check if the documentation page is displayed")
     public boolean isDocumentationLinkWorking() {
         clickOnDocumentationLink();
         return pageInteractionHelper.isElementDisplayed(documentationPageHeading) &&
                 pageInteractionHelper.getCurrentUrl().contains("/documentation");
+    }
+
+    @Step("Check if the projects page is displayed")
+    public boolean isProjectsLinkWorking() {
+        clickOnProjectsLink();
+        return pageInteractionHelper.isElementDisplayed(projectsHeading) &&
+                pageInteractionHelper.getCurrentUrl().contains("/projects");
     }
 }
