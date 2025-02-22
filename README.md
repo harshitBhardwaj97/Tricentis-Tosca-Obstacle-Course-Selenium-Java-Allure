@@ -5,6 +5,14 @@
 This automation testing framework is built for automating
 the [Obstacle-Course](https://obstaclecourse.tricentis.com/Obstacles/List), offered by Tricentis-Tosca.
 
+![image](https://github.com/user-attachments/assets/895cea60-b788-4990-9d59-8d898553332c)
+
+![image](https://github.com/user-attachments/assets/ad0e1838-9c0d-422d-b629-043a2bb797e5)
+
+![image](https://github.com/user-attachments/assets/941dd02e-26fd-4c40-84f2-bcc06f5e9645)
+
+![image](https://github.com/user-attachments/assets/9932a89e-36ae-422c-a9ea-5f961b52b6e8)
+
 [Obstacle-Course](https://obstaclecourse.tricentis.com/Obstacles/List) is a set of mini-challenges, ranging
 from simple tasks such as **clicking on a button** to complex ones like **Bubble-Sort** or playing
 **Tricentis-Olympics**, among others.
