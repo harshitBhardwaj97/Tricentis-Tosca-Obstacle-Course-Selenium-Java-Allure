@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd">
+<suite name="AllTest-Suite" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="com.harshitbhardwaj.listener.AnnotationTransformer"/>
+        <listener class-name="com.harshitbhardwaj.listener.AllureTestLifeCycleListener"/>
+    </listeners>
+    <test name="IDsAreNotEverythingTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.IdsAreNotEverythingTest"/>
+        </classes>
+    </test>
+    <test name="TwinsTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TwinsTest"/>
+        </classes>
+    </test>
+    <test name="NotATableTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.NotATableTest"/>
+        </classes>
+    </test>
+    <test name="TwoTimesTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TwoTimesTest"/>
+        </classes>
+    </test>
+    <test name="FunWithTablesTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.FunWithTablesTest"/>
+        </classes>
+    </test>
+    <test name="TestingMethodsTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TestingMethodsTest"/>
+        </classes>
+    </test>
+    <test name="AndCountingTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.AndCountingTest"/>
+        </classes>
+    </test>
+    <test name="WaitAMomentTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.WaitAMomentTest"/>
+        </classes>
+    </test>
+    <test name="ToscaBotCanFlyTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ToscaBotCanFlyTest"/>
+        </classes>
+    </test>
+    <test name="ExtractingTextTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ExtractingTextTest"/>
+        </classes>
+    </test>
+    <test name="AdditionTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.AdditionTest"/>
+        </classes>
+    </test>
+    <test name="BeFastAutomateTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.BeFastAutomateTest"/>
+        </classes>
+    </test>
+    <test name="ToughCookieTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ToughCookieTest"/>
+        </classes>
+    </test>
+    <test name="ConfusingDatesTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ConfusingDatesTest"/>
+        </classes>
+    </test>
+    <test name="AgainAndAgainAndAgainTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.AgainAndAgainAndAgainTest"/>
+        </classes>
+    </test>
+    <test name="PopupWindowsTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.PopupWindowsTest"/>
+        </classes>
+    </test>
+    <test name="TomorrowTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TomorrowTest"/>
+        </classes>
+    </test>
+    <test name="LotsOfRowsTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.LotsOfRowsTest"/>
+        </classes>
+    </test>
+    <test name="TheLastRowTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TheLastRowTest"/>
+        </classes>
+    </test>
+    <test name="MathTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.MathTest"/>
+        </classes>
+    </test>
+    <test name="TableSearchTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TableSearchTest"/>
+        </classes>
+    </test>
+    <test name="MeetingSchedulerTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.MeetingSchedulerTest"/>
+        </classes>
+    </test>
+    <test name="ClickMeIfYouCanTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ClickMeIfYouCanTest"/>
+        </classes>
+    </test>
+    <test name="EscapeTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.EscapeTest"/>
+        </classes>
+    </test>
+    <test name="HiddenElementTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.HiddenElementTest"/>
+        </classes>
+    </test>
+    <test name="ScrollIntoViewTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ScrollIntoViewTest"/>
+        </classes>
+    </test>
+    <test name="FutureChristmasTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.FutureChristmasTest"/>
+        </classes>
+    </test>
+    <test name="RedStripeTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.RedStripeTest"/>
+        </classes>
+    </test>
+    <test name="TheObviousTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TheObviousTest"/>
+        </classes>
+    </test>
+    <test name="ErrorsOccurTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.ErrorsOccurTest"/>
+        </classes>
+    </test>
+    <test name="HalfwayTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.HalfwayTest"/>
+        </classes>
+    </test>
+    <test name="DropDownTableTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.DropDownTableTest"/>
+        </classes>
+    </test>
+    <test name="EmptyTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.EmptyTest"/>
+        </classes>
+    </test>
+    <test name="TricentisToscaOlympicsTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TricentisToscaOlympicsTest"/>
+        </classes>
+    </test>
+    <test name="TodolistTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TodolistTest"/>
+        </classes>
+    </test>
+    <test name="BubbleSortTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.BubbleSortTest"/>
+        </classes>
+    </test>
+    <test name="GetSuesNumberTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.GetSuesNumberTest"/>
+        </classes>
+    </test>
+    <test name="FindTheChangedCellTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.FindTheChangedCellTest"/>
+        </classes>
+    </test>
+    <test name="FindAndFillTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.FindAndFillTest"/>
+        </classes>
+    </test>
+    <test name="TestdataInAServiceTest">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.TestdataInAServiceTest"/>
+        </classes>
+    </test>
+</suite>

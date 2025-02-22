@@ -1,0 +1,45 @@
+<!--?xml version="1.0"?-->
+<catalog>
+    <book>
+        <author>Adams, Douglas</author>
+        <title>The Hitchhiker's Guide to the Galaxy</title>
+        <price>$11.30</price>
+        <publish_date>1995-09-27</publish_date>
+        <isbn>0345391802</isbn>
+    </book>
+    <book>
+        <author>Dawkins, Richard</author>
+        <title>The Selfish Gene</title>
+        <price>$8.30</price>
+        <publish_date>2006-05-25</publish_date>
+        <isbn>0199291152</isbn>
+    </book>
+    <book>
+        <author>Carner, Cem</author>
+        <title>Testing Computer Software</title>
+        <price>$28.95</price>
+        <publish_date>1999-04-02</publish_date>
+        <isbn>1013443</isbn>
+    </book>
+    <book>
+        <author>Hofstadter, Douglas</author>
+        <title>Goedel, Escher, Bach: An Eternal Golden Braid</title>
+        <price>$28.30</price>
+        <publish_date>1999-02-05</publish_date>
+        <isbn>0465026567</isbn>
+    </book>
+    <book>
+        <author>Boyle, Thomas</author>
+        <title>The harder they come</title>
+        <price>$18.94</price>
+        <publish_date>2015-03-31</publish_date>
+        <isbn>0062349376</isbn>
+    </book>
+    <book>
+        <author>Thompson, Hunter</author>
+        <title>The Rum Dairy</title>
+        <price>$12.94</price>
+        <publish_date>1999-11-01</publish_date>
+        <isbn>0684856476</isbn>
+    </book>
+</catalog>
