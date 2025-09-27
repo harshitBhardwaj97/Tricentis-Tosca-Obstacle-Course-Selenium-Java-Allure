@@ -23,9 +23,14 @@ public class BubbleSortPage implements TestHelper {
     private final By secondNumber = By.xpath("//div[@class='bubble']/div[2]");
     private final By nextButton = By.xpath("//button[.='Next']");
     private final By swapButton = By.xpath("//button[.='Swap']");
+    private final By keepSorting = By.xpath("//a[.='Keep sorting']");
 
     public BubbleSortPage(PageInteractionHelper pageInteractionHelper) {
         this.pageInteractionHelper = pageInteractionHelper;
+    }
+
+    public String getKeepSortingText() {
+        return pageInteractionHelper.getText(keepSorting).toLowerCase();
     }
 
     public List<WebElement> getNumberElements() {
@@ -60,8 +65,8 @@ public class BubbleSortPage implements TestHelper {
     }
 
     // Method to shuffle the numbers until the list is sorted
-    @Step("Shuffling the numbers until the list is sorted")
-    public void shuffleAndSort() {
+    @Step("Shuffling the numbers until the list is sorted (comparing list")
+    public void shuffleAndSortComparingList() {
         List<WebElement> numbers;
         List<Integer> list;
 
@@ -101,6 +106,53 @@ public class BubbleSortPage implements TestHelper {
                 list = numbers.stream().map(e -> Integer.parseInt(e.getText())).collect(Collectors.toList());
                 isSorted = isListSortedInAscendingOrder(list);
 
+            } catch (StaleElementReferenceException e) {
+                System.out.println("StaleElementReferenceException");
+                continue;
+            }
+        }
+    }
+
+    public void shuffleAndSortWithKeepSortingText() {
+
+        // Get the text of "keep sorting" tag
+        String keepSortingText = getKeepSortingText();
+        boolean isSorted = !keepSortingText.equals("keep sorting");
+        System.out.println(keepSortingText);
+
+        if (isSorted) {
+            System.out.println("List is already sorted in ascending order.");
+            return;
+        }
+
+        WebDriverWait wait = new WebDriverWait(pageInteractionHelper.getDriver(), Duration.ofSeconds(10));
+
+        // Shuffle (Bubble Sort) logic
+        while (!isSorted) {
+            try {
+                // Handle the exception here
+                int firstNum = getFirstNumber();
+                int secondNum = getSecondNumber();
+
+                // If first number is greater than second, swap them
+                if (firstNum > secondNum) {
+                    System.out.println("Swapping " + firstNum + " and " + secondNum);
+                    clickSwapButton();
+                    wait.until(d -> {
+                        System.out.println("Swapped");
+                        return getFirstNumber() < getSecondNumber();
+                    });
+                    clickNextButton();
+                } else {
+                    System.out.println("No swap is required");
+                    clickNextButton();
+                }
+
+                // Re-check if the list is sorted after each action by getting the text
+                keepSortingText = getKeepSortingText();
+                System.out.println("Current text is: " + keepSortingText);
+                isSorted = !keepSortingText.equals("keep sorting");
+                System.out.println("Is sorted: " + isSorted);
             } catch (StaleElementReferenceException e) {
                 System.out.println("StaleElementReferenceException");
                 continue;

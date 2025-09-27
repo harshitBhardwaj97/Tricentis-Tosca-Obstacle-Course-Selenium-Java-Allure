@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TheLastRowTest extends BaseTest {
@@ -17,9 +19,10 @@ public class TheLastRowTest extends BaseTest {
 
     @Override
     @BeforeMethod
-    public void setup() {
-        super.setup();
-        theLastRowPage = new TheLastRowPage(pageInteractionHelper);
+    @Parameters({"browser"})
+    public void setup(@Optional("chrome") String browser) {
+        super.setup(browser);
+        theLastRowPage = new TheLastRowPage(getPageHelper());
         theLastRowPage.navigateToObstacle();
     }
 

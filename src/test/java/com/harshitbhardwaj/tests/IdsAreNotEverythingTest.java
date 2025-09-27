@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
 public class IdsAreNotEverythingTest extends BaseTest {
@@ -17,9 +18,9 @@ public class IdsAreNotEverythingTest extends BaseTest {
 
     @Override
     @BeforeMethod
-    public void setup() {
-        super.setup();
-        idsAreNotEverythingPage = new IdsAreNotEverythingPage(pageInteractionHelper);
+    public void setup(@Optional("chrome") String browser) {
+        super.setup(browser);
+        idsAreNotEverythingPage = new IdsAreNotEverythingPage(getPageHelper());
         idsAreNotEverythingPage.navigateToObstacle();
     }
 

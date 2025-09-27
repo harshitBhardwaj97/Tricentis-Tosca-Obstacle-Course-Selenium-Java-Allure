@@ -20,12 +20,32 @@ import org.aeonbits.owner.Config.LoadType;
 public interface Configuration extends Config {
 
     /**
-     * Retrieves the browser type for the application.
+     * Retrieves the Selenium Grid URL.
      *
-     * @return the browser type (e.g., "chrome", "firefox", etc.)
+     * @return the grid URL as a String.
      */
-    @Key("browser")
-    String browser();
+    @Key("gridUrl")
+    @DefaultValue("localhost")
+    String gridUrl();
+
+    /**
+     * Retrieves the Selenium Grid Port.
+     *
+     * @return the grid port as a String.
+     */
+    @Key("gridPort")
+    @DefaultValue("4444")
+    String gridPort();
+
+    /**
+     * Retrieves the run mode for the tests.
+     * Default is LOCAL if not specified.
+     *
+     * @return the run mode (e.g., "LOCAL" OR "GRID").
+     */
+    @Key("runMode")
+    @DefaultValue("LOCAL")
+    String runMode();
 
     /**
      * Retrieves the headless mode setting for the browser.

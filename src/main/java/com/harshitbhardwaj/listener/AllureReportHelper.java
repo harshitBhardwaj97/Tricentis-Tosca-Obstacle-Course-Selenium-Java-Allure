@@ -42,8 +42,7 @@ public class AllureReportHelper {
         var allureEnvironmentInformation = new HashMap<>(Map.of(
                 "URL of Application Under Test", BASE_URL,
                 "Default Timeout Duration", String.valueOf(EXPLICIT_LONG_WAIT),
-                "Headless mode", String.valueOf(configuration().headless()),
-                "Local browser used for execution", configuration().browser()
+                "Headless mode", String.valueOf(configuration().headless())
         ));
 
         // Write the environment information to Allure report
